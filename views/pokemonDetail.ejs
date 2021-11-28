@@ -1,0 +1,53 @@
+<%- include('partials/header') %>
+<main class="pokemonDetail">
+  <header>
+    <h1>
+      Détails de <%= locals.nom %>
+    </h1>
+  </header>
+  <article>
+    <img src="/img/<%= locals.numero %>.png" />
+    <div class="detail-content">
+      <h2>#<%= numero %> <%= locals.nom %></h2>
+
+      <% if (locals.types && locals.types.length) { %>
+        <div class="pokemonTypes">
+          <% for (let type of types) { %>
+          <div class="pokemonType type-<%= type.name.toLowerCase() %>" style="background-color: #<%= type.color %>;">
+            <%= type.name %>
+          </div>
+          <% } %>
+        </div>
+      <% } %>
+
+
+
+      <h3>Statistiques</h3>
+      <%- include('partials/oneStat', {
+        name: 'PV',
+        value: locals.pv
+      }) %>
+      <%- include('partials/oneStat', {
+        name: 'Attaque',
+        value: locals.attaque
+      }) %>
+      <%- include('partials/oneStat', {
+        name: 'Défense',
+        value: locals.defense
+      }) %>
+      <%- include('partials/oneStat', {
+        name: 'Attaque Spé.',
+        value: locals.attaque_spe
+      }) %>
+      <%- include('partials/oneStat', {
+        name: 'Défense Spé.',
+        value: locals.defense_spe
+      }) %>
+      <%- include('partials/oneStat', {
+        name: 'Vitesse',
+        value: locals.vitesse
+      }) %>
+    </div>
+  </article>
+</main>
+<%- include('partials/footer') %> 

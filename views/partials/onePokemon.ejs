@@ -1,0 +1,10 @@
+<article class="onePokemon">
+    <a href="/pokemon/<%= numero %>">
+        <% if (locals.numero) { %>
+      <img src="/img/<%= numero %>.png" />
+      <h2>#<%= numero %> <%= locals.nom %></h2>
+        <% } else { %>
+      <h2>Ce pokemon n'a pas de numéro</h2>
+        <% }%>
+    </a>    
+  </article> 

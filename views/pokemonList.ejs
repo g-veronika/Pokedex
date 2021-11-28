@@ -1,0 +1,15 @@
+<%- include('partials/header') %> 
+  <main class="pokemonList">
+    <% if (
+        locals.pokemons && 
+        Array.isArray(locals.pokemons) &&
+        locals.pokemons.length
+      ){ %>
+      <% for(let pokemon of pokemons) { %>
+        <%- include('partials/onePokemon', pokemon) %>
+      <% }%>
+    <% } else { %>
+      <h2>Aucun pokémon à afficher</h2>
+    <% } %>
+  </main>
+<%- include('partials/footer') %>

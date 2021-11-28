@@ -1,0 +1,14 @@
+<div class="oneStat">
+    <h4><%= locals.name %></h4>
+    <div class="oneStat__value">
+      <%= locals.value %>
+    </div>
+    <progress 
+      class="oneStat__progress"
+      max="255" 
+      value="<%= locals.value %>"
+    >
+    <%= (locals.value * 100) / 255 %>%
+    </progress>
+  </div> 
+  

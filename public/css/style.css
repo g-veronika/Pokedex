@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+body {
+  background-color: #C14040;
+  font-family: 'Bree Serif', serif;
+  padding: 1rem 1.5rem;
+}
+
+body a {
+  color: #C14040;
+}
+
+.mainHeader {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.8em;
+  padding: 1em 0.5em;
+  display: flex;
+  flex-direction: row;
+  color: #C14040;
+  margin: 0.5rem;
+}
+
+.mainHeader h1 {
+  flex: 1;
+}
+
+.mainHeader ul li {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+.mainHeader ul li a {
+  text-decoration: none;
+}
+
+.pokemonList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.onePokemon a {
+  text-decoration: none;
+}
+
+.onePokemon {
+  background-color: rgba(0, 0, 0, 0.25);
+  width: calc(33% - 1em);
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 1.5em;
+}
+
+.onePokemon img {
+  width: 100%;
+}
+.onePokemon h2 {
+  color: white;
+  text-align: center;
+} 
+
+.pokemonDetail h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+}
+.pokemonDetail article {
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pokemonDetail article > img {
+  width: 40%;
+  margin-right: 2rem;
+}
+
+.pokemonDetail article .detail-content {
+  padding: 2rem 1rem;
+  background-color: rgba(0, 0, 0, 0.10);
+  flex: 1;
+  border-radius: 0.5rem;
+}
+
+.pokemonDetail article h2 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.pokemonDetail article h3 {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+.pokemonDetail article .oneStat {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 0;
+}
+
+.pokemonDetail article .oneStat h4 {
+  flex: 0.25;
+}
+.pokemonDetail article .oneStat__value {
+  flex: 0.10;
+}
+.pokemonDetail article .oneStat__progress {
+  flex: 0.65;
+}
+
+.pokemonDetail article progress[value]::-webkit-progress-bar {
+  background-color: #632B2B;
+  border-radius: 0.3em;
+  overflow: hidden;
+}
+
+.pokemonDetail article progress[value]::-webkit-progress-value {
+  background-color: white;
+} 
+
+
+.pokemonTypes .pokemonType {
+  display: inline-block;
+  margin: 0.5em 0.5em 0.5em 0;
+  color: white;
+  padding: 0.7em;
+  border-radius: 0.5em;
+} 
